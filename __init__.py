@@ -13,14 +13,9 @@ bl_info = {
     }
 
 
-try:
-    import blenderbim
-except ModuleNotFoundError as error:
-    print('Add-on error: BlenderBIM not found.')
-    raise error
-
 from .ui import VIEW3D_PT_AddonPanel
 from .op import AssetizeObject, ClearActiveAsset
+
 
 classes = [AssetizeObject,  ClearActiveAsset, VIEW3D_PT_AddonPanel]
 props = {}
